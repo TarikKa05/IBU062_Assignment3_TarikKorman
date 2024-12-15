@@ -9,4 +9,5 @@ Devices found to be connected to my network:
 8. PC-PT PC2 IP:169.254.2.133
 9. Server-PT Server 2 IP:169.254.114.87
 10. Server-PT Server 1 IP:169.254.201.56
-
+11. PC-PT PC4 IP: 210.3.14.2
+12. PC-PT PC3 IP: 168.90.0.4
