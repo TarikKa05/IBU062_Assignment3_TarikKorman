@@ -11,3 +11,23 @@ Devices found to be connected to my network:
 10. Server-PT Server 1 IP:169.254.201.56
 11. PC-PT PC4 IP: 210.3.14.2
 12. PC-PT PC3 IP: 168.90.0.4
+
+Explanation of DHCP commands and steps:
+-I added devices: router, switch, PCs in work space
+-I used straight-through cable to connect router to switch and PCs to switch
+-I checked if all devices are connected
+-Then I opened router, went to CLI tab, and entered privileged mode using command enable 
+-I entered global cofiguration mode using command configure terminal
+-I created DHCP pool using command ip dhcp pool MYPOOL
+-I specified network addresses and subnet masks, example network network 168.90.0.0 255.255.255.0
+-I set up router to act as default gateway using command default-router 168.90.0.1
+-I exited the DHCP configuration mode using command exit
+-I configured router interface using commands
+interface FastEthernet0/0 
+ip address 168.90.0.1. 255.255.255.0
+no shutdown
+-I exited interface configuration mode using command exit
+-Configured PCs by going to Desktop tab in PC, and opening IP configuration
+-I set IP configuration to DHCP by selecting DHCP, and the PC will request IP address frm the DHCP server
+-To verify configuration, I checked DHCP bindings on the router with command show ip dhcp binding
+-I pinged the router from the server using command ping 168.90.0.4.
